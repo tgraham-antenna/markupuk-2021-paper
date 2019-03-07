@@ -237,6 +237,12 @@ bibliography:focus-within:after(1090),
 bibliography:hover:after(1090) {
   visibility: visible;
 }
+abbrev:before {
+  content: "[";
+}
+abbrev:after {
+  content: "]";
+}
 link:after(10) {
   content: oxy_button(transparent, true, action, oxy_action(name, 'Edit', description, 'Edit', icon, url('img/edit16.png'), operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-setPseudoClassNames, '-oxy-edit'), showIcon, true);
 }
@@ -244,7 +250,7 @@ link:-oxy-edit:after(10) {
   content: oxy_button(transparent, true, action, oxy_action(name, 'Done', description, 'Done', icon, url('img/done16.png'), operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-edit'), showIcon, true);
 }
 link:not([xl|href]) {
-  content: "Edit to enter link URL";
+  content: "Edit reference attribute to enter link URL";
   color: gray;
 }
 link:-oxy-edit:after(5) {

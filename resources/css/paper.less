@@ -3,9 +3,6 @@
 @namespace oxy url('http://www.oxygenxml.com/extensions/author');
 @namespace xl url('http://www.w3.org/1999/xlink');
 
-
-
-
 article > info > author {
 	.markedSection('Author information');
 	.hint();
@@ -39,9 +36,17 @@ bibliography {
    });
 }
 
+abbrev:before {
+	content:"[";
+}
+abbrev:after {
+	content:"]";
+}
+
+
 link {.editableInline();}
 link:not([xl|href]) {
-	content:"Edit to enter link URL";
+	content:"Edit reference attribute to enter link URL";
 	color:gray;
 }
 link:-oxy-edit:after(5) {
