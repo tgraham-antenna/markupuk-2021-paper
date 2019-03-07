@@ -1,0 +1,45 @@
+@import "library.less";
+
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+@namespace xl url('http://www.w3.org/1999/xlink');
+
+
+
+
+article > info > author {
+	.markedSection('Author information');
+	.hint();
+}
+
+keywordset {
+	display:block;
+	.markedSection('Keywords');
+	.hint();
+}
+
+abstract {
+	.markedSection('Abstract');
+	.hint();
+}
+
+
+
+bibliography {
+	.markedSection('Bibliography');
+	.hint();
+}
+
+link {.editableInline();}
+link:not([xl|href]) {
+	content:"Edit to enter link URL";
+	color:gray;
+}
+link:-oxy-edit:after(5) {
+    text-decoration : none;
+    .textfield("  URL:", "xl:href");
+}
+
+abstract:before,
+article>info>title:before {
+	content:"";
+}
