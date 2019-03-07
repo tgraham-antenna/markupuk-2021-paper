@@ -231,7 +231,7 @@ bibliography:empty {
 bibliography:after(1090) {
   visibility: hidden;
   display: block;
-  content: oxy_button(color, #b08a5d, fontInherit, true, action, oxy_action(name, '[+]', description, 'Insert new reference', operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', arg-fragment, '<bibliomixed xmlns="http://docbook.org/ns/docbook"><abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> <author><personname><?oxy-placeholder content="Author name"?></personname></author>: <title><?oxy-placeholder content="Reference title"?></title>.<date><?oxy-placeholder content="DD Month Year"?></date>,<orgname><?oxy-placeholder content="Organization name"?></orgname><bibliomisc><link/></bibliomisc></bibliomixed>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child' arg-schemaAware, false), transparent, true, actionContext, element, showIcon, true);
+  content: oxy_button(color, #b08a5d, fontInherit, true, action, oxy_action(name, '[+]', description, 'Insert new reference', operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', arg-fragment, '<bibliomixed  xmlns="http://docbook.org/ns/docbook"><abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> <author> <personname><surname><?oxy-placeholder content="Surname"?></surname> <firstname><?oxy-placeholder content="Firstname"?></firstname></personname> </author>: <title><?oxy-placeholder content="Reference title"?></title>. <date><?oxy-placeholder content="DD Month Year"?></date>, <orgname><?oxy-placeholder content="Organization name"?></orgname> <bibliomisc><link/></bibliomisc></bibliomixed>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child' arg-schemaAware, false), transparent, true, actionContext, element, showIcon, true);
 }
 bibliography:focus-within:after(1090),
 bibliography:hover:after(1090) {
@@ -242,6 +242,9 @@ abbrev:before {
 }
 abbrev:after {
   content: "]";
+}
+surname:first-child:after {
+  content: ", ";
 }
 link:after(10) {
   content: oxy_button(transparent, true, action, oxy_action(name, 'Edit', description, 'Edit', icon, url('img/edit16.png'), operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-setPseudoClassNames, '-oxy-edit'), showIcon, true);

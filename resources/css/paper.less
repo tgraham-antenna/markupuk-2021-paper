@@ -32,7 +32,7 @@ bibliography {
 	.markedSection('Bibliography');
 	.hint();
 	.addActions({
-       .inlineActionLast('<bibliomixed xmlns="http://docbook.org/ns/docbook"><abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> <author><personname><?oxy-placeholder content="Author name"?></personname></author>: <title><?oxy-placeholder content="Reference title"?></title>.<date><?oxy-placeholder content="DD Month Year"?></date>,<orgname><?oxy-placeholder content="Organization name"?></orgname><bibliomisc><link/></bibliomisc></bibliomixed>', '+', 'Insert new reference');
+       .inlineActionLast('<bibliomixed  xmlns="http://docbook.org/ns/docbook"><abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> <author> <personname><surname><?oxy-placeholder content="Surname"?></surname> <firstname><?oxy-placeholder content="Firstname"?></firstname></personname> </author>: <title><?oxy-placeholder content="Reference title"?></title>. <date><?oxy-placeholder content="DD Month Year"?></date>, <orgname><?oxy-placeholder content="Organization name"?></orgname> <bibliomisc><link/></bibliomisc></bibliomixed>', '+', 'Insert new reference');
    });
 }
 
@@ -42,7 +42,9 @@ abbrev:before {
 abbrev:after {
 	content:"]";
 }
-
+surname:first-child:after{
+	content:", ";
+}
 
 link {.editableInline();}
 link:not([xl|href]) {

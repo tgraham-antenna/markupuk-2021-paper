@@ -45,13 +45,16 @@
 
 	<bibliography xml:id="references">
 		<bibliomixed> <abbrev>DB5SPEC</abbrev> <author>
-			<personname>Norman, Walsh</personname>
-		</author>: <title>The DocBook Schema</title>. Working Draft 5.0a1, <date>29 June
+			<personname><surname>Walsh</surname><firstname>Norman</firstname></personname>
+			</author>: <title>The DocBook Schema</title>. Working Draft 5.0a1, <date>29 June
 			2005</date>, <orgname>OASIS</orgname>. <bibliomisc><link
-				xl:href="http://www.docbook.org/specs/wd-docbook-docbook-5.0a1.html"/></bibliomisc> </bibliomixed>
+			xl:href="http://www.docbook.org/specs/wd-docbook-docbook-5.0a1.html"/></bibliomisc> </bibliomixed>
 		
-		<bibliomixed> <abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> <author>
-			<personname><?oxy-placeholder content="Author name"?></personname>
+		<bibliomixed>
+			<abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> 	
+			<author>
+				<personname><surname><?oxy-placeholder content="Surname"?></surname>
+				<firstname><?oxy-placeholder content="Firstname"?></firstname></personname>
 			</author>: <title><?oxy-placeholder content="Reference title"?></title>.
 			<date><?oxy-placeholder content="DD Month Year"?></date>,
 			<orgname><?oxy-placeholder content="Organization name"?></orgname>
