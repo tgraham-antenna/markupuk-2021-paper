@@ -114,6 +114,28 @@
 }
 
 
+.inlineActionLast(@fragment, @label, @description) {
+    & { 
+        content+_: oxy_button(  
+            color, #B08A5D,
+            fontInherit, true,
+            action,
+            oxy_action(
+                name, '[@{label}]', 
+                description, '@{description}', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '@{fragment}',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'Inside as last child'
+                arg-schemaAware, false
+            ), 
+            transparent, true,
+            actionContext, element,
+            showIcon, true
+        );
+    }
+}
+
 .inlineAction(@fragment, @label, @description) {
     & {
         content+_: oxy_button(  

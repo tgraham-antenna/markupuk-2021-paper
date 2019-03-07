@@ -108,6 +108,21 @@ keywordset:-oxy-hints:before(201) {
   padding-right: 1.2rem;
   content: oxy_htmlContent(href, 'hints.html', id, oxy_concat('hints', '-', oxy_local-name()), width, 100%);
 }
+keywordset:empty {
+  -oxy-show-placeholder: always;
+}
+keywordset:after(1090) {
+  visibility: hidden;
+  display: block;
+  content: oxy_button(color, #b08a5d, fontInherit, true, action, oxy_action(name, '[+]', description, 'Insert new keyword', operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', arg-fragment, '<keyword xmlns="http://docbook.org/ns/docbook"><?oxy-placeholder content="other keyword"?></keyword>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child' arg-schemaAware, false), transparent, true, actionContext, element, showIcon, true);
+}
+keywordset:focus-within:after(1090),
+keywordset:hover:after(1090) {
+  visibility: visible;
+}
+keyword {
+  margin: 0.1em;
+}
 abstract {
   border: 1px solid gray;
   border-radius: 5px;
@@ -209,6 +224,18 @@ bibliography:-oxy-hints:before(201) {
   padding: 0.2rem;
   padding-right: 1.2rem;
   content: oxy_htmlContent(href, 'hints.html', id, oxy_concat('hints', '-', oxy_local-name()), width, 100%);
+}
+bibliography:empty {
+  -oxy-show-placeholder: always;
+}
+bibliography:after(1090) {
+  visibility: hidden;
+  display: block;
+  content: oxy_button(color, #b08a5d, fontInherit, true, action, oxy_action(name, '[+]', description, 'Insert new reference', operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', arg-fragment, '<bibliomixed xmlns="http://docbook.org/ns/docbook"><abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> <author><personname><?oxy-placeholder content="Author name"?></personname></author>: <title><?oxy-placeholder content="Reference title"?></title>.<date><?oxy-placeholder content="DD Month Year"?></date>,<orgname><?oxy-placeholder content="Organization name"?></orgname><bibliomisc><link/></bibliomisc></bibliomixed>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child' arg-schemaAware, false), transparent, true, actionContext, element, showIcon, true);
+}
+bibliography:focus-within:after(1090),
+bibliography:hover:after(1090) {
+  visibility: visible;
 }
 link:after(10) {
   content: oxy_button(transparent, true, action, oxy_action(name, 'Edit', description, 'Edit', icon, url('img/edit16.png'), operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-setPseudoClassNames, '-oxy-edit'), showIcon, true);
