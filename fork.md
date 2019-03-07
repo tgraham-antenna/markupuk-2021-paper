@@ -1,3 +1,3 @@
-# Create your own proposal
+# How to create my own paper
 
 ...
