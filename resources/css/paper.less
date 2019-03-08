@@ -35,15 +35,12 @@ section > title {
    });
 }
 
-section {
-	.hint();
-}
-
 article > section {
-	
 	.addActions({
        .inlineActionAfter('<section  xmlns="http://docbook.org/ns/docbook"><title><?oxy-placeholder content="Section title"?></title> <para><?oxy-placeholder content="You can use not only paragraphs, but also programlistings, examples, lists, tables, etc."?></para></section>', 'add section', 'Insert new section');
 	});
+	.deleteSection();
+	.hint();
 }
 
 
@@ -53,6 +50,11 @@ bibliography {
 	.addActions({
        .inlineActionLast('<bibliomixed  xmlns="http://docbook.org/ns/docbook"><abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> <author> <personname><surname><?oxy-placeholder content="Surname"?></surname> <firstname><?oxy-placeholder content="Firstname"?></firstname></personname> </author>: <title><?oxy-placeholder content="Reference title"?></title>. <date><?oxy-placeholder content="DD Month Year"?></date>, <orgname><?oxy-placeholder content="Organization name"?></orgname> <bibliomisc><link/></bibliomisc></bibliomixed>', '+', 'Insert new reference');
    });
+}
+
+bibliomixed{
+	.deleteSection();
+	padding-right:1em;
 }
 
 abbrev:before {

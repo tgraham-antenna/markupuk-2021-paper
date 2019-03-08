@@ -406,12 +406,47 @@
     }
 }
 
+.delete() {
+    & {
+        content+_: oxy_button(  
+            color, #B08A5D,
+            action,
+            oxy_action(
+                    name, '[X]', 
+                    icon, '/images/Remove16.png',
+                    description, oxy_concat('Delete the current "', oxy_local-name(), '" element'), 
+                    operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation'
+                ), 
+            transparent, true,
+            actionContext, element,
+            showIcon, true
+        );
+    }
+}
+
+.deleteSection(@layer:80) {
+	.deleteAction(@layer);
+	&:after(@{layer}) {
+    	bottom:0px;
+    }
+}
+
 .deleteAction(@layer:80) {
     &:-oxy-delete {
         background-color:rgba(210, 200, 200, 0.20);
     }
 
+	& {
+		position:relative;
+	}
+
     &:after(@{layer}) {
+    	position:absolute;
+    	display:block;
+    	width:25px;
+    	text-align:right;
+    	bottom:-22px;
+    	right:0px;
         visibility:hidden;
         content:
             " "
@@ -470,14 +505,14 @@
             oxy_button(
                 action, oxy_action(
                     name, '[-]', 
-                    description, oxy_concat('See description for ', oxy_local-name()), 
+                    description, oxy_concat('See/hide description for ', oxy_local-name()), 
                     operation, 'ro.sync.ecss.extensions.commons.operations.TogglePseudoClassOperation', 
                     arg-elementLocation, '.',
                     icon, url('img/info16.png'),
                     arg-name, '-oxy-hints'
                 ),
                 transparent, true,
-                hoverPseudoclassName, '-oxy-delete-hints',
+                //hoverPseudoclassName, '-oxy-delete-hints',
                 showIcon, true)
             ;
     }
