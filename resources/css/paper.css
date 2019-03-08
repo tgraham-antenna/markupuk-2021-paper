@@ -320,6 +320,7 @@ bibliography:hover:after(1090) {
 }
 bibliomixed {
   position: relative;
+  border-radius: 5px;
   padding-right: 1em;
 }
 bibliomixed:-oxy-delete {
