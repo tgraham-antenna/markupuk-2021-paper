@@ -186,43 +186,6 @@ section > title:focus-within:after(2090),
 section > title:hover:after(2090) {
   visibility: visible;
 }
-section {
-  position: relative;
-}
-section:before(5000) {
-  line-height: 1px;
-  width: 1em;
-  display: block;
-  position: absolute;
-  top: 2px;
-  text-align: right;
-  right: 2px;
-  visibility: hidden;
-  content: oxy_button(action, oxy_action(name, '[+]', description, oxy_concat('See description for ', oxy_local-name()), operation, 'ro.sync.ecss.extensions.commons.operations.TogglePseudoClassOperation', arg-elementLocation, '.', icon, url('img/info16.png'), arg-name, '-oxy-hints'), transparent, true, showIcon, true);
-}
-section:-oxy-hints:before(5000) {
-  visibility: hidden;
-  content: oxy_button(action, oxy_action(name, '[-]', description, oxy_concat('See description for ', oxy_local-name()), operation, 'ro.sync.ecss.extensions.commons.operations.TogglePseudoClassOperation', arg-elementLocation, '.', icon, url('img/info16.png'), arg-name, '-oxy-hints'), transparent, true, hoverPseudoclassName, '-oxy-delete-hints', showIcon, true);
-}
-section:hover:before(5000) {
-  visibility: visible;
-}
-section:-oxy-hints:-oxy-hints:-oxy-delete-hints:before(201) {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-section:-oxy-hints:before(201) {
-  display: block;
-  border: 1px solid #d89e36;
-  background-color: rgba(255, 250, 213, 0.6);
-  border-radius: 8px;
-  font-family: arial, helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.2rem;
-  margin-bottom: 0.6rem;
-  padding: 0.2rem;
-  padding-right: 1.2rem;
-  content: oxy_htmlContent(href, 'hints.html', id, oxy_concat('hints', '-', oxy_local-name()), width, 100%);
-}
 article > section:empty {
   -oxy-show-placeholder: always;
 }
