@@ -114,7 +114,7 @@ keywordset:empty {
 keywordset:after(1090) {
   visibility: hidden;
   display: block;
-  content: oxy_button(color, #b08a5d, fontInherit, true, action, oxy_action(name, '[+]', description, 'Insert new keyword', operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', arg-fragment, '<keyword xmlns="http://docbook.org/ns/docbook"><?oxy-placeholder content="other keyword"?></keyword>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child' arg-schemaAware, false), transparent, true, actionContext, element, showIcon, true);
+  content: oxy_button(color, #b08a5d, fontInherit, true, action, oxy_action(name, '[+]', description, 'Insert new keyword', operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', arg-fragment, '<keyword xmlns="http://docbook.org/ns/docbook"><?oxy-placeholder content="keyword"?></keyword>', arg-insertLocation, '.', arg-insertPosition, 'Inside as last child' arg-schemaAware, false), transparent, true, actionContext, element, showIcon, true);
 }
 keywordset:focus-within:after(1090),
 keywordset:hover:after(1090) {
@@ -173,6 +173,30 @@ abstract:-oxy-hints:before(201) {
   padding: 0.2rem;
   padding-right: 1.2rem;
   content: oxy_htmlContent(href, 'hints.html', id, oxy_concat('hints', '-', oxy_local-name()), width, 100%);
+}
+section > title:empty {
+  -oxy-show-placeholder: always;
+}
+section > title:after(2090) {
+  visibility: hidden;
+  display: inline;
+  content: ' ' ' ' oxy_button(transparent, true, actionID, 'promote.section', showIcon, true) oxy_button(transparent, true, actionID, 'demote.section', showIcon, true);
+}
+section > title:focus-within:after(2090),
+section > title:hover:after(2090) {
+  visibility: visible;
+}
+article > section:empty {
+  -oxy-show-placeholder: always;
+}
+article > section:after(1090) {
+  visibility: hidden;
+  display: block;
+  content: oxy_button(color, #b08a5d, action, oxy_action(name, '[add section]', description, 'Insert new section', operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', arg-fragment, '<section  xmlns="http://docbook.org/ns/docbook"><title><?oxy-placeholder content="Section title"?></title> <para><?oxy-placeholder content="You can use not only paragraphs, but also programlistings, examples, lists, tables, etc."?></para></section>', arg-insertLocation, '.', arg-insertPosition, 'After', arg-schemaAware, false), transparent, true, actionContext, element, showIcon, true);
+}
+article > section:focus-within:after(1090),
+article > section:hover:after(1090) {
+  visibility: visible;
 }
 bibliography {
   border: 1px solid gray;

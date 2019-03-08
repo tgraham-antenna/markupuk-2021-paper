@@ -13,7 +13,7 @@ keywordset {
 	.markedSection('Keywords');
 	.hint();
 	.addActions({
-       .inlineActionLast('<keyword xmlns="http://docbook.org/ns/docbook"><?oxy-placeholder content="other keyword"?></keyword>', '+', 'Insert new keyword');
+       .inlineActionLast('<keyword xmlns="http://docbook.org/ns/docbook"><?oxy-placeholder content="keyword"?></keyword>', '+', 'Insert new keyword');
    });
 }
 
@@ -26,6 +26,20 @@ abstract {
 	.hint();
 }
 
+
+section > title {
+	.addActionsInline({
+	   .actionSeparator(' ');
+       .action('promote.section');
+       .action('demote.section');
+   });
+}
+
+article > section {
+	.addActions({
+       .inlineActionAfter('<section  xmlns="http://docbook.org/ns/docbook"><title><?oxy-placeholder content="Section title"?></title> <para><?oxy-placeholder content="You can use not only paragraphs, but also programlistings, examples, lists, tables, etc."?></para></section>', 'add section', 'Insert new section');
+	});
+}
 
 
 bibliography {

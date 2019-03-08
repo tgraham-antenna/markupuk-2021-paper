@@ -19,6 +19,26 @@
     }
 }
 
+.addActionsInline(@actions, @actionsLayer:2090) {
+    &:empty {
+        -oxy-show-placeholder:always;
+    }
+    &:after(@{actionsLayer}) {
+        visibility:hidden;        
+        display:inline;
+        @actions();
+    }
+    &:focus-within:after(@{actionsLayer}),
+    &:hover:after(@{actionsLayer}){
+        visibility:visible;    
+    }
+}
+
+.actionSeparator(@separator:" | ") {
+    & {
+     content+_:@separator;
+    }
+}
 
 .closeableAction(@actionID) {
     & {
