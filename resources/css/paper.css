@@ -186,10 +186,10 @@ section > title:focus-within:after(2090),
 section > title:hover:after(2090) {
   visibility: visible;
 }
-article > section {
+section {
   position: relative;
 }
-article > section:before(5000) {
+section:before(5000) {
   line-height: 1px;
   width: 1em;
   display: block;
@@ -200,17 +200,17 @@ article > section:before(5000) {
   visibility: hidden;
   content: oxy_button(action, oxy_action(name, '[+]', description, oxy_concat('See description for ', oxy_local-name()), operation, 'ro.sync.ecss.extensions.commons.operations.TogglePseudoClassOperation', arg-elementLocation, '.', icon, url('img/info16.png'), arg-name, '-oxy-hints'), transparent, true, showIcon, true);
 }
-article > section:-oxy-hints:before(5000) {
+section:-oxy-hints:before(5000) {
   visibility: hidden;
   content: oxy_button(action, oxy_action(name, '[-]', description, oxy_concat('See description for ', oxy_local-name()), operation, 'ro.sync.ecss.extensions.commons.operations.TogglePseudoClassOperation', arg-elementLocation, '.', icon, url('img/info16.png'), arg-name, '-oxy-hints'), transparent, true, hoverPseudoclassName, '-oxy-delete-hints', showIcon, true);
 }
-article > section:hover:before(5000) {
+section:hover:before(5000) {
   visibility: visible;
 }
-article > section:-oxy-hints:-oxy-hints:-oxy-delete-hints:before(201) {
+section:-oxy-hints:-oxy-hints:-oxy-delete-hints:before(201) {
   background-color: rgba(255, 255, 255, 0.2);
 }
-article > section:-oxy-hints:before(201) {
+section:-oxy-hints:before(201) {
   display: block;
   border: 1px solid #d89e36;
   background-color: rgba(255, 250, 213, 0.6);
