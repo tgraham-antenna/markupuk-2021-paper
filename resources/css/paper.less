@@ -2,7 +2,7 @@
 
 @namespace oxy url('http://www.oxygenxml.com/extensions/author');
 @namespace xl url('http://www.w3.org/1999/xlink');
-
+@media screen {
 article > info > author {
 	.markedSection('Author information');
 	.hint();
@@ -81,4 +81,5 @@ link:-oxy-edit:after(5) {
 abstract:before,
 article>info>title:before {
 	content:"";
+}
 }

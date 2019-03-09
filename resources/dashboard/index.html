@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Markup UK 2019 Paper Dashboard</title>
+        <script src="params.js"></script>
+    </head>
+    <body>
+        <h1>Markup UK 2019 Paper Dashboard</h1>
+        <div>
+            Every time you submit a change to GitHub the PDF is auto-generated.
+        </div>
+        <ul>
+            <li><a href='paper.pdf'>View generated PDF version</a></li>
+            <li><a id="edit-link" href=''>Edit Docbook source</a></li>
+            <li><a id="repo-link" href=''>View on GitHub</a></li>
+            <li><a href='markupuk.zip'>Download deliverable</a></li>
+        </ul>
+        <script>
+            document.getElementById('edit-link').href = window.EDIT_LINK;
+            document.getElementById('repo-link').href = window.REPO_LINK;
+        </script>
+    </body>
+</html>

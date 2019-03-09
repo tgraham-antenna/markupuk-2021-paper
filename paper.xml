@@ -58,7 +58,7 @@
 			</author>: <title><?oxy-placeholder content="Reference title"?></title>.
 			<date><?oxy-placeholder content="DD Month Year"?></date>,
 			<orgname><?oxy-placeholder content="Organization name"?></orgname>
-			<bibliomisc><link/></bibliomisc></bibliomixed>
+			<bibliomisc><link xl:href="about:blank"/></bibliomisc></bibliomixed>
 		
 	</bibliography>
 

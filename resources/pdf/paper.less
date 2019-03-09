@@ -1,0 +1,156 @@
+@import "../../bin/frameworks/docbook/css/docbook.css";
+@import "../../bin/frameworks/docbook/css/print.css";
+
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+
+* {
+    font-family: 'EB Garamond', serif;
+}
+
+/**
+ * Page margin boxes.
+ */
+@page :left {
+  @top-right {
+    content: url('MarkupUK.svg');
+  }
+  @top-left {
+    content: string(section-name);
+  }
+  @bottom-right-corner {
+    content: counter(page);
+  }
+}
+@page :right {
+  @top-left {
+    content: url('MarkupUK.svg');
+  }
+  @top-right {
+    content: string(section-name);
+  }
+  @bottom-left-corner {
+    content: counter(page);
+  }
+}
+
+/**
+ * Page layout
+ */
+@page {
+  border: 1px solid black; 
+  border-width: 1px 0 1px 0;
+  size: a4;
+  margin: 2cm;
+  @top-right {
+      font-family: 'EB Garamond', serif;
+  } 
+  @top-left {
+      font-family: 'EB Garamond', serif;
+  }
+  @bottom-right-corner {
+      font-family: 'EB Garamond', serif;
+  }
+  @bottom-left-corner {
+      font-family: 'EB Garamond', serif;
+  }
+
+}
+
+section > title {
+  string-set: section-name content();
+}
+info {
+  page-break-after: always;
+  margin-top: 5cm;
+}
+
+/* Bookmarks */
+section > title {
+   bookmark-label: content(before) content(text);
+   bookmark-level: 2;
+}
+section > section > title {
+    bookmark-level: 3;
+}
+section > section > section > title {
+    bookmark-level: 4;
+}
+info > title {
+    bookmark-label: content(text);
+    bookmark-level: 1;
+}
+bibliography {
+    bookmark-label: "Bibliography";
+    bookmark-level: 2;
+}
+appendix {
+    bookmark-label: "Appendix";
+    bookmark-level: 2;
+}
+
+/**
+ * Elements
+ */
+title {
+    color: black !important;
+}
+article > info > title {
+  border-width: 0;  
+  &:before {
+      content: none;
+  }
+}
+keywordset {
+    display: none;
+}
+
+/* Info content is indented. */
+@info-indent: 3cm;
+info > * {
+    margin-left: @info-indent; 
+}
+info > title {
+    margin-left: 0;
+}
+
+/* Author */
+author * {
+   display: inline !important;
+}
+
+/* Abstract */
+abstract {
+    &:before {
+        text-align: center;
+        content: "Abstract";
+        display:block;
+        color: black !important;
+        margin: 1em 0;
+    }
+}
+
+/* Section content is indented. */
+@section-indent: 2cm;
+section > * {
+    margin-left: @section-indent;
+}
+section > title,
+section > section {
+    margin-left: 0;
+}
+
+/* Bibliography */
+bibliography:before {
+    content: "Bibliography";
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+bibliography > * {
+    margin-left: @section-indent;
+    border-width: 0 !important;
+}
+bibliography > *:before {
+    content: "[" counter(biblio) "]";
+    counter-increment: biblio;
+}
