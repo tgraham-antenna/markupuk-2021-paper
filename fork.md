@@ -3,9 +3,9 @@
 ## Overview
 
 This projects allows you to:
-- Edit the paper online using Oxygen XML Web Author
-- See a preview of the generated PDF that is automatically generated each time you commit
-- Download an archive with the paper and all the supporting files
+- Edit the paper online using Oxygen XML Web Author (https://www.oxygenxml.com/xml_web_author.html).
+- See a preview of the generated PDF that is automatically generated each time you commit using Netlify (https://netlify.com).
+- Download an archive with the paper and all the supporting files.
 
 ## How it works
 
@@ -24,8 +24,8 @@ After that you will be able to access a "Dashboard" page that will give you acce
 
 ## Privacy
 
-You can choose to make the created GitHub repository private.
-The "Dashboard" page and the generated PDF will be available at a randomly-generated URL that can be accessed by anyone who knows it. 
+- You can choose to make the created GitHub repository private.
+- The "Dashboard" page and the generated PDF will be available at a randomly-generated URL that can only be accessed by anyone who knows it. You can change this URL to make it even harder to guess.
 
 ## Getting started
 
@@ -35,6 +35,6 @@ Perform the following steps:
 2. Click "Connect to GitHub". If you do not have a GitHub account, you can create one for free.
 3. Choose a name for the repository that will contain your paper XML source.
 4. Click "Save & Deploy"
-5. You will be redirected to the project's Netlify home page. Meanwhile the PDF version of the paper starts to be generated. In approximately one minute your Dashboard will be deployed at the URL "https://<project-id>.netlify.com". You can change this URL in the "Settings" tab.
+5. You will be redirected to the project's Netlify home page. Meanwhile the PDF version of the paper starts to be generated. In approximately one minute your Dashboard will be deployed at the URL "https://\<project-id\>.netlify.com". You can change this URL in the "Settings" tab.
 6. Open the Dashboard.
-
+7. You can use the "View on GitHub" link to access the newly created GitHub repository. The repository is public by default. You can go to the **Settings** tab and make it private.
