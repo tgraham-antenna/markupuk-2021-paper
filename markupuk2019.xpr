@@ -10,6 +10,21 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>resources/pdf/build_chemistry.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Conference Paper</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>paper.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -19,7 +34,7 @@
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>XML_CHEMISTRY</String>
+                                        <String>ANT</String>
                                     </list>
                                 </field>
                             </scenarioAssociation>
@@ -28,33 +43,33 @@
                     <entry>
                         <String>scenarios</String>
                         <scenario-array>
-                            <chemistryScenario>
+                            <antScenario>
                                 <field name="additionalAntArgs">
-                                    <null/>
+                                    <String></String>
                                 </field>
                                 <field name="buildTarget">
-                                    <null/>
+                                    <String></String>
                                 </field>
                                 <field name="buildFilePath">
-                                    <String>build_chemistry.xml</String>
+                                    <String>resources/pdf/build_chemistry.xml</String>
                                 </field>
                                 <field name="ditaParams">
                                     <list>
                                         <antParameter>
                                             <field name="name">
-                                                <String>xmlURL</String>
+                                                <String>docbook_location</String>
                                             </field>
                                             <field name="description">
                                                 <String></String>
                                             </field>
                                             <field name="value">
-                                                <String>${currentFileURL}</String>
+                                                <String>${frameworkDir(DocBook 5)}</String>
                                             </field>
                                             <field name="defaultValue">
                                                 <null/>
                                             </field>
                                             <field name="type">
-                                                <Integer>2</Integer>
+                                                <Integer>5</Integer>
                                             </field>
                                             <field name="possibleValues">
                                                 <null/>
@@ -65,88 +80,19 @@
                                         </antParameter>
                                         <antParameter>
                                             <field name="name">
-                                                <String>cssURL</String>
+                                                <String>oxygenInstallDir</String>
                                             </field>
                                             <field name="description">
                                                 <String></String>
                                             </field>
                                             <field name="value">
-                                                <String>${pdu}/resources/pdf/paper.css</String>
+                                                <String>${oxygenInstallDir}</String>
                                             </field>
                                             <field name="defaultValue">
                                                 <null/>
                                             </field>
                                             <field name="type">
-                                                <Integer>2</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>outputPath</String>
-                                            </field>
-                                            <field name="description">
-                                                <String></String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${cfd}/out/${cfn}.pdf</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>2</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>dumpStyledContent</String>
-                                            </field>
-                                            <field name="description">
-                                                <String></String>
-                                            </field>
-                                            <field name="value">
-                                                <String>false</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>0</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>dumpFO</String>
-                                            </field>
-                                            <field name="description">
-                                                <String></String>
-                                            </field>
-                                            <field name="value">
-                                                <String>false</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>0</Integer>
+                                                <Integer>5</Integer>
                                             </field>
                                             <field name="possibleValues">
                                                 <null/>
@@ -164,19 +110,19 @@
                                     <Boolean>false</Boolean>
                                 </field>
                                 <field name="customJavaHomeDir">
-                                    <null/>
+                                    <String></String>
                                 </field>
                                 <field name="useCustomANTHome">
                                     <Boolean>false</Boolean>
                                 </field>
                                 <field name="customANTHomeDir">
-                                    <null/>
+                                    <String></String>
                                 </field>
                                 <field name="workingDir">
-                                    <String>${oxygenInstallDir}</String>
+                                    <String>${pd}</String>
                                 </field>
                                 <field name="showConsoleAlways">
-                                    <Boolean>false</Boolean>
+                                    <Boolean>true</Boolean>
                                 </field>
                                 <field name="advancedOptionsMap">
                                     <null/>
@@ -185,10 +131,10 @@
                                     <String>Conference Paper</String>
                                 </field>
                                 <field name="baseURL">
-                                    <String></String>
+                                    <null/>
                                 </field>
                                 <field name="footerURL">
-                                    <String></String>
+                                    <null/>
                                 </field>
                                 <field name="fOPMethod">
                                     <null/>
@@ -197,22 +143,22 @@
                                     <null/>
                                 </field>
                                 <field name="headerURL">
-                                    <String></String>
+                                    <null/>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String></String>
+                                    <null/>
                                 </field>
                                 <field name="inputXMLURL">
-                                    <String></String>
+                                    <null/>
                                 </field>
                                 <field name="defaultScenario">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="isFOPPerforming">
                                     <Boolean>false</Boolean>
                                 </field>
                                 <field name="type">
-                                    <String>XML_CHEMISTRY</String>
+                                    <String>ANT</String>
                                 </field>
                                 <field name="saveAs">
                                     <Boolean>true</Boolean>
@@ -227,10 +173,10 @@
                                     <null/>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
-                                    <Boolean>false</Boolean>
+                                    <Boolean>true</Boolean>
                                 </field>
                                 <field name="locationToOpenInBrowserURL">
-                                    <String>${cfd}/out/${cfn}.pdf</String>
+                                    <String></String>
                                 </field>
                                 <field name="openInEditor">
                                     <Boolean>false</Boolean>
@@ -239,7 +185,7 @@
                                     <Boolean>false</Boolean>
                                 </field>
                                 <field name="showInXMLPane">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="showInSVGPane">
                                     <Boolean>false</Boolean>
@@ -257,12 +203,12 @@
                                     <String-array/>
                                 </field>
                                 <field name="xslTransformer">
-                                    <String>CHEMISTRY</String>
+                                    <String>ANT</String>
                                 </field>
                                 <field name="extensionURLs">
                                     <String-array/>
                                 </field>
-                            </chemistryScenario>
+                            </antScenario>
                         </scenario-array>
                     </entry>
                 </serializableOrderedMap>
