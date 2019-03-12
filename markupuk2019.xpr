@@ -38,6 +38,21 @@
                                     </list>
                                 </field>
                             </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>resources/pdf/sdasdasdasd%20asd%20asd%20asd%20asd%20asd%20asd%20asd%20asd%20as%20.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Conference Paper</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
                         </scenarioAssociation-array>
                     </entry>
                     <entry>
@@ -64,6 +79,29 @@
                                             </field>
                                             <field name="value">
                                                 <String>${frameworkDir(DocBook 5)}</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <null/>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>5</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </antParameter>
+                                        <antParameter>
+                                            <field name="name">
+                                                <String>file_location</String>
+                                            </field>
+                                            <field name="description">
+                                                <String></String>
+                                            </field>
+                                            <field name="value">
+                                                <String>${cfd}/${cfne}</String>
                                             </field>
                                             <field name="defaultValue">
                                                 <null/>

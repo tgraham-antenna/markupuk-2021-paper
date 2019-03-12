@@ -10,7 +10,7 @@
           <arg value="-install-dir"/>
           <arg value="${oxygenInstallDir}"/>
           <arg value="-in"/>
-          <arg value="paper.xml"/>
+          <arg value="${file_location}"/>
 
           <arg value="-css"/>
           <arg value="${docbook_location}/css/docbook.css"/>
