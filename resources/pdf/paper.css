@@ -136,3 +136,40 @@ bibliography > *:before {
   content: "[" counter(biblio) "]";
   counter-increment: biblio;
 }
+@media print {
+  article > title:empty,
+  article > info > title:empty {
+    content: "[Your paper title]";
+  }
+  section > title:empty,
+  section > info > title:empty {
+    content: "[Your section title]";
+  }
+  author > personname:empty {
+    content: "[Author name]";
+  }
+  author > personname > surname:empty {
+    content: "[Author surname]";
+  }
+  author > personname > firstname:empty {
+    content: "[Author firstname]";
+  }
+  author > email:empty {
+    content: "[Author email]";
+  }
+  author > uri:empty {
+    content: "[Author website]";
+  }
+  bibliomixed > abbrev:empty {
+    content: "[[Abreviation for references]]";
+  }
+  bibliomixed > title:empty {
+    content: "[Reference title]";
+  }
+  bibliomixed > date:empty {
+    content: "[DD Month YYYY]";
+  }
+  bibliomixed > orgname:empty {
+    content: "[Organization name]";
+  }
+}
