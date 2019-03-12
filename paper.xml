@@ -17,11 +17,11 @@
 		</author>
 		<keywordset>
 			<keyword><?oxy-placeholder content="keyword relevant to your paper"?></keyword>
-			<keyword><?oxy-placeholder content="other keyword"?></keyword>
+			<keyword><?oxy-placeholder content="keyword"?></keyword>
 		</keywordset>
 		<abstract>
 			<para><?oxy-placeholder content="First paragraph of your abstract."?></para>
-			<para><?oxy-placeholder content="Second paragraph …"?></para>
+			<para><?oxy-placeholder content="Another paragraph …"?></para>
 		</abstract>
 	</info>
 
