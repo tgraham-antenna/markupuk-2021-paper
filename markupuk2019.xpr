@@ -10,7 +10,7 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>resources/pdf/build_chemistry.xml</String>
+                                    <String>paper.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -25,7 +25,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>paper.xml</String>
+                                    <String>resources/pdf/build_chemistry.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -176,7 +176,7 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="locationToOpenInBrowserURL">
-                                    <String></String>
+                                    <String>${pd}/out/paper.pdf</String>
                                 </field>
                                 <field name="openInEditor">
                                     <Boolean>false</Boolean>

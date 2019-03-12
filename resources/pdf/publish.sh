@@ -17,7 +17,7 @@ fi
 mkdir -p out
 
 sh "bin/oxygen-pdf-chemistry/chemistry.sh" -in "${SOURCE}" \
-  -css resources/pdf/paper.less \
+  -css resources/pdf/paper.less bin/frameworks/docbook/css/docbook.css bin/frameworks/docbook/css/print.css \
   -out "out/paper.pdf"
 
 

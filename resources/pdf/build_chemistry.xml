@@ -3,7 +3,9 @@
   <target name="dist"
       xmlns:if="ant:if"
       xmlns:unless="ant:unless">
-          
+
+      <mkdir dir="../../out/"/>
+
       <java classname="com.oxygenxml.chemistry.OxygenPDFChemistry">
           <arg value="-install-dir"/>
           <arg value="${oxygenInstallDir}"/>
@@ -11,9 +13,9 @@
           <arg value="paper.xml"/>
 
           <arg value="-css"/>
-          <arg value="resources/pdf/paper.css"/>
           <arg value="${docbook_location}/css/docbook.css"/>
           <arg value="${docbook_location}/css/print.css"/>
+          <arg value="resources/pdf/paper.css"/>
           
           <arg value="-out"/>
           <arg value="out/paper.pdf"/>
@@ -24,7 +26,7 @@
           <arg value="${http.proxyPort}" if:set="http.proxyPort" />
           
           <classpath>
-              <file file="${oxygenInstallDir}/lib/oxygen-pdf-chemistry.pdf"/>
+              <file file="${oxygenInstallDir}/lib/oxygen-pdf-chemistry.jar"/>
               <fileset dir="${oxygenInstallDir}/lib">
                   <include name="oxygen-*.jar" />
               </fileset>
