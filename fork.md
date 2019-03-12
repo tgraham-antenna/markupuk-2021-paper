@@ -12,7 +12,7 @@ This projects allows you to:
 The "Deploy on Netlify" button below will do the following:
 
 1. Create a Git repository under your GitHub account that will contain the paper template and supporting resources.
-1. Set up a continuous publishing process that auto-generates the PDF whenever you commit changes to the paper XML source.
+1. Set up a continuous publishing process on Netlify that auto-generates the PDF whenever you commit changes to the repository.
 1. Create a "Dashboard" page for the project.
 
 After that you will be able to access a "Dashboard" page that will give you access to the following functionality:
@@ -24,14 +24,14 @@ After that you will be able to access a "Dashboard" page that will give you acce
 
 ## Privacy
 
-- You can choose to make the created GitHub repository private.
+- The GitHub repository is public by default. You can make it private afterwards.
 - The "Dashboard" page and the generated PDF will be available at a randomly-generated URL that can only be accessed by anyone who knows it. You can change this URL to make it even harder to guess.
 
 ## Getting started
 
 Perform the following steps:
 
-1. Click the following button: [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/oxygenxml/markupuk-2019-paper/)
+1. Click the following button: [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/oxygenxml/markupuk-2019-paper)
 2. Click "Connect to GitHub". If you do not have a GitHub account, you can create one for free.
 3. Choose a name for the repository that will contain your paper XML source.
 4. Click "Save & Deploy"
