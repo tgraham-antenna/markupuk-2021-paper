@@ -1,0 +1,26 @@
+body > h1 {
+	margin:1em;
+	padding:0.5em;
+	text-align:center;
+}
+
+
+section {
+	margin-left:1em;
+	margin-right:1em;
+	margin-bottom:0.5em;
+	padding-left:0.5em;
+	border:1px solid gray;
+	border-radius:5px;
+}
+
+.button{
+	border:1px solid blue;
+	background-color:#FFC25E;
+	color:#1E6BB2;
+	border-radius:5px;
+	padding:0.5em;
+	font-weight:bold;
+	font-family:arial, helvetica, sans-serif;
+	text-decoration:none;
+}
