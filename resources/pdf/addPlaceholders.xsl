@@ -10,12 +10,19 @@
 		</xsl:copy>
 	</xsl:template>
 	
-	<xsl:template match="processing-instruction()">
-		<xsl:if test="name()='oxy-placeholder'">
-			<xsl:text>[</xsl:text>
-			<xsl:value-of select="translate(substring-after(., 'content='), $q, '')"/>
-			<xsl:text>]</xsl:text>
-		</xsl:if>
+	<xsl:template match="processing-instruction()" priority="100">
+		<xsl:choose>
+			<xsl:when test="name()='oxy-placeholder'">
+				<xsl:text>[</xsl:text>
+				<xsl:value-of select="translate(substring-after(., 'content='), $q, '')"/>
+				<xsl:text>]</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:copy>
+					<xsl:apply-templates select="node() | @*"/>
+				</xsl:copy>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 	
 </xsl:stylesheet>
