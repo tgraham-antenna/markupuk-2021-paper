@@ -24,7 +24,20 @@ fi
 mkdir -p out
 
 echo "Generating output"
-java -cp "bin/saxon.jar:bin/docbook/xsl/extensions/xslthl.jar" com.icl.saxon.StyleSheet paper.xml bin/docbook/xsl/fo/docbook_custom.xsl > out/paper.fo
+java -cp "bin/saxon.jar:bin/docbook/xsl/extensions/xslthl.jar" com.icl.saxon.StyleSheet paper.xml bin/docbook/xsl/fo/docbook_custom.xsl \
+  admon.graphics=1 \
+  admon.graphics.extension=.png \
+  admon.graphics.path=bin/docbook/css/img/ \
+  "body.font.family=Times New Roman, Arial Unicode MS, Tahoma, Batang, serif" \
+  callout.graphics.path=bin/docbook/xsl/images/callouts/ \
+  draft.mode="no" \
+  fop.extensions=0 \
+  fop1.extensions=0 \
+  highlight.source=1 \
+  highlight.xslthl.config=bin/docbook/xsl/highlighting/xslthl-config.xml \
+  "monospace.font.family=monospace, Courier New, Courier, Consolas, Liberation Mono, Arial Unicode MS" \
+  paper.type=A4 \
+  "title.font.family=Arial, Arial Unicode MS, Tahoma, Batang, sans-serif" > out/paper.fo
 
 export OS=Linux 
 bash bin/fop-2.1/fop out/paper.fo out/paper.pdf
