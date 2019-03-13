@@ -1,4 +1,10 @@
 OXY_VERSION="21.0.0.0"
+if [ "$OS" = "Windows_NT" ] ; then
+    pathSepChar=";"
+else
+    pathSepChar=":"
+fi
+
 
 mkdir -p bin
 echo "Downloading the DocBook framework"
@@ -23,8 +29,10 @@ fi
 
 mkdir -p out
 
+
 echo "Generating output"
-java -cp "bin/saxon.jar:bin/docbook/xsl/extensions/xslthl.jar" com.icl.saxon.StyleSheet paper.xml bin/docbook/xsl/fo/docbook_custom.xsl \
+java -jar bin/saxon.jar paper.xml resources/pdf/addPlaceholders.xsl > out/processed_paper.xml
+java -cp "bin/saxon.jar${pathSepChar}bin/docbook/xsl/extensions/xslthl.jar" com.icl.saxon.StyleSheet out/processed_paper.xml bin/docbook/xsl/fo/docbook_custom.xsl \
   admon.graphics=1 \
   admon.graphics.extension=.png \
   admon.graphics.path=bin/docbook/css/img/ \
@@ -41,5 +49,5 @@ java -cp "bin/saxon.jar:bin/docbook/xsl/extensions/xslthl.jar" com.icl.saxon.Sty
 
 export OS=Linux 
 bash bin/fop-2.1/fop out/paper.fo out/paper.pdf
-rm out/paper.fo
+rm out/paper.fo out/processed_paper.xml
 echo "Done"
