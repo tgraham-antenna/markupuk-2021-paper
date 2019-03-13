@@ -6,7 +6,7 @@
 
       <mkdir dir="../../out/"/>
 
-      <java classname="com.oxygenxml.chemistry.OxygenPDFChemistry">
+  	<java classname="com.oxygenxml.chemistry.OxygenPDFChemistry" jvmargs="-Djava.awt.headless=true">
           <arg value="-install-dir"/>
           <arg value="${oxygenInstallDir}"/>
           <arg value="-in"/>
