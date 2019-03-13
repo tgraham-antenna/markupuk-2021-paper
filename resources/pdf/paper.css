@@ -121,12 +121,21 @@ section > title,
 section > section {
   margin-left: 0;
 }
+bibliography {
+  counter-reset: biblio;
+}
 /* Bibliography */
 bibliography:before {
   content: "Bibliography";
   display: block;
   font-size: 24px;
   font-weight: bold;
+}
+bibliography > * > abbrev:first-child:before {
+  content: "[";
+}
+bibliography > * > abbrev:first-child:after {
+  content: "]";
 }
 bibliography > * {
   margin-left: 2cm;
