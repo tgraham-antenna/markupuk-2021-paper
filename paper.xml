@@ -50,15 +50,13 @@
 			2005</date>, <orgname>OASIS</orgname>. <bibliomisc><link
 			xl:href="http://www.docbook.org/specs/wd-docbook-docbook-5.0a1.html"/></bibliomisc> </bibliomixed>
 		
-		<bibliomixed>
-			<abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> 	
-			<author>
-				<personname><surname><?oxy-placeholder content="Surname"?></surname>
+		<bibliomixed> <abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> <author>
+			<personname><surname><?oxy-placeholder content="Surname"?></surname>
 				<firstname><?oxy-placeholder content="Firstname"?></firstname></personname>
 			</author>: <title><?oxy-placeholder content="Reference title"?></title>.
 			<date><?oxy-placeholder content="DD Month Year"?></date>,
 			<orgname><?oxy-placeholder content="Organization name"?></orgname>
-			<bibliomisc><link xl:href="about:blank"/></bibliomisc></bibliomixed>
+			<bibliomisc><link/></bibliomisc></bibliomixed>
 		
 	</bibliography>
 
