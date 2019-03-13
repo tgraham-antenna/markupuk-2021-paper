@@ -161,7 +161,7 @@ bibliography > *:before {
     content: "[Author website]";
   }
   bibliomixed > abbrev:empty {
-    content: "[[Abreviation for references]]";
+    content: "[Abreviation for references]";
   }
   bibliomixed > title:empty {
     content: "[Reference title]";
