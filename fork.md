@@ -25,7 +25,7 @@ After that you will be able to access a "Dashboard" page that will give you acce
 ## Privacy
 
 - The GitHub repository is public by default. You can make it private afterwards.
-- The "Dashboard" page and the generated PDF will be available at a randomly-generated URL that can only be accessed by anyone who knows it. You can change this URL to make it even harder to guess.
+- The "Dashboard" page and the generated PDF will be available at a randomly-generated URL that can only be accessed by people who know it. You can change this URL to make it even harder to guess.
 
 ## Getting started
 
