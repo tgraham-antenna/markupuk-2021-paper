@@ -22,3 +22,5 @@ echo "window.REPO_LINK = \"${CLEAN_REPO_URL}\";" > out/params.js
 echo "window.EDIT_LINK = \"${EDIT_URL}\";" >> out/params.js
 cp resources/dashboard/index.html out/index.html
 cp resources/dashboard/site.css out/site.css
+cp resources/dashboard/MarkupUK.png out/MarkupUK.png
+cp resources/dashboard/MarkupUK@2x.png out/MarkupUK@2x.png
