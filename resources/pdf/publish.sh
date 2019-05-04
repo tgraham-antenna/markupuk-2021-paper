@@ -17,7 +17,7 @@ fi
 echo "Downloading Saxon 6.5.5"
 if [[ ! -e bin/saxon.jar ]];
 then
-  curl -q -L https://packages.atlassian.com/maven-3rdparty/saxon/saxon/6.5.5/saxon-6.5.5.jar > bin/saxon.jar
+  curl -q -L http://central.maven.org/maven2/saxon/saxon/6.5.3/saxon-6.5.3.jar > bin/saxon.jar
 fi
 
 echo "Downloading FOP 2.1"
