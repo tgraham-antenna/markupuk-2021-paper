@@ -42,7 +42,7 @@ java -cp "bin/saxon.jar${pathSepChar}bin/docbook/xsl/extensions/xslthl.jar" com.
   fop.extensions=0 \
   fop1.extensions=0 \
   highlight.source=1 \
-  highlight.xslthl.config=bin/docbook/xsl/highlighting/xslthl-config.xml \
+  highlight.xslthl.config=file://`pwd`/bin/docbook/xsl/highlighting/xslthl-config.xml \
   "monospace.font.family=monospace, Courier New, Courier, Consolas, Liberation Mono, Arial Unicode MS" \
   paper.type=A4 \
   "title.font.family=Arial, Arial Unicode MS, Tahoma, Batang, sans-serif" > out/paper.fo
