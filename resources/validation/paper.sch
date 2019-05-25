@@ -20,9 +20,7 @@
                 words! You have <sch:value-of select="$words"/>
                 <sch:value-of select="if ($words=1) then ' word' else ' words'"/>. </sch:assert>
             <sch:assert test="$words &gt;= $minWords" role="warn"> It is
-                recommended to have at least <sch:value-of select="'$minWords '"/>
-                words! You have <value-of select="$words"/>
-                <sch:value-of select="if ($words=1) then ' word' else ' words'"/>.
+                recommended to have at least 30 words!
             </sch:assert>
         </sch:rule>
     </sch:pattern>

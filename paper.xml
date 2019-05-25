@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/css" href="resources/css/paper.css"?>
+<?xml-model href="resources/validation/paper.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0">
 	<info>
 		<title><?oxy-placeholder content="Your paper title"?></title>
