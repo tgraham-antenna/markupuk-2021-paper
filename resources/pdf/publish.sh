@@ -17,7 +17,7 @@ fi
 echo "Downloading Saxon 6.5.5"
 if [[ ! -e bin/saxon.jar ]];
 then
-  curl -q -L https://packages.atlassian.com/maven-3rdparty/saxon/saxon/6.5.5/saxon-6.5.5.jar > bin/saxon.jar
+  curl -q -L http://central.maven.org/maven2/saxon/saxon/6.5.3/saxon-6.5.3.jar > bin/saxon.jar
 fi
 
 echo "Downloading FOP 2.1"
@@ -42,7 +42,7 @@ java -cp "bin/saxon.jar${pathSepChar}bin/docbook/xsl/extensions/xslthl.jar" com.
   fop.extensions=0 \
   fop1.extensions=0 \
   highlight.source=1 \
-  highlight.xslthl.config=bin/docbook/xsl/highlighting/xslthl-config.xml \
+  highlight.xslthl.config=file://`pwd`/bin/docbook/xsl/highlighting/xslthl-config.xml \
   "monospace.font.family=monospace, Courier New, Courier, Consolas, Liberation Mono, Arial Unicode MS" \
   paper.type=A4 \
   "title.font.family=Arial, Arial Unicode MS, Tahoma, Batang, sans-serif" > out/paper.fo
