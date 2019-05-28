@@ -1,4 +1,4 @@
-OXY_VERSION="21.0.0.0"
+OXY_VERSION="21.1.0.0"
 if [ "$OS" = "Windows_NT" ] ; then
     pathSepChar=";"
 else
@@ -10,7 +10,7 @@ mkdir -p bin
 echo "Downloading the DocBook framework"
 if [[ ! -e bin/docbook ]];
 then
-  curl -q https://www.oxygenxml.com/maven/com/oxygenxml/frameworks/21.0.0.0/frameworks-21.0.0.0.zip > bin/frameworks.zip
+  curl -q https://www.oxygenxml.com/maven/com/oxygenxml/frameworks/21.1.0.0/frameworks-21.1.0.0.zip > bin/frameworks.zip
   unzip -q bin/frameworks.zip -d bin/
 fi
 
