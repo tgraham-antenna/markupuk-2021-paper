@@ -27,7 +27,7 @@ To generate the PDF:
 - From the **Project** panel
   - Select and right-click on `paper.xml`
   - Choose **Transform** > **Transform with...**
-  - Choose **Conference Paper** and press **Apply**
+  - Choose **Conference Paper** or **[Markup UK Paper](README.markup-uk-paper.md)** and press **Apply**
 
 - From the editor, once `paper.xml` is opened
   - Use the "Apply transformation scenario" action from the toolbar
